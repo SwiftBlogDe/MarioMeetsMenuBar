@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3730CC0C1B4D9B3800E8FDBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */; };
+		3730CC0E1B4D9B3800E8FDBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC0D1B4D9B3800E8FDBB /* ViewController.swift */; };
+		3730CC101B4D9B3800E8FDBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */; };
+		3730CC131B4D9B3900E8FDBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3730CC111B4D9B3900E8FDBB /* Main.storyboard */; };
+		3730CC1F1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3730CC191B4D9B3900E8FDBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3730CBFE1B4D9B3800E8FDBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3730CC051B4D9B3800E8FDBB;
+			remoteInfo = MarioMeetsStatusBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3730CC061B4D9B3800E8FDBB /* MarioMeetsStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarioMeetsStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3730CC0A1B4D9B3800E8FDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3730CC0D1B4D9B3800E8FDBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3730CC121B4D9B3900E8FDBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3730CC181B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarioMeetsStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3730CC1D1B4D9B3900E8FDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioMeetsStatusBarTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3730CC031B4D9B3800E8FDBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3730CC151B4D9B3900E8FDBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3730CBFD1B4D9B3800E8FDBB = {
+			isa = PBXGroup;
+			children = (
+				3730CC081B4D9B3800E8FDBB /* MarioMeetsStatusBar */,
+				3730CC1B1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */,
+				3730CC071B4D9B3800E8FDBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3730CC071B4D9B3800E8FDBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3730CC061B4D9B3800E8FDBB /* MarioMeetsStatusBar.app */,
+				3730CC181B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3730CC081B4D9B3800E8FDBB /* MarioMeetsStatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */,
+				3730CC0D1B4D9B3800E8FDBB /* ViewController.swift */,
+				3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */,
+				3730CC111B4D9B3900E8FDBB /* Main.storyboard */,
+				3730CC091B4D9B3800E8FDBB /* Supporting Files */,
+			);
+			path = MarioMeetsStatusBar;
+			sourceTree = "<group>";
+		};
+		3730CC091B4D9B3800E8FDBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3730CC0A1B4D9B3800E8FDBB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3730CC1B1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */,
+				3730CC1C1B4D9B3900E8FDBB /* Supporting Files */,
+			);
+			path = MarioMeetsStatusBarTests;
+			sourceTree = "<group>";
+		};
+		3730CC1C1B4D9B3900E8FDBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3730CC1D1B4D9B3900E8FDBB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3730CC051B4D9B3800E8FDBB /* MarioMeetsStatusBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3730CC221B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBar" */;
+			buildPhases = (
+				3730CC021B4D9B3800E8FDBB /* Sources */,
+				3730CC031B4D9B3800E8FDBB /* Frameworks */,
+				3730CC041B4D9B3800E8FDBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarioMeetsStatusBar;
+			productName = MarioMeetsStatusBar;
+			productReference = 3730CC061B4D9B3800E8FDBB /* MarioMeetsStatusBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3730CC171B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3730CC251B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBarTests" */;
+			buildPhases = (
+				3730CC141B4D9B3900E8FDBB /* Sources */,
+				3730CC151B4D9B3900E8FDBB /* Frameworks */,
+				3730CC161B4D9B3900E8FDBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3730CC1A1B4D9B3900E8FDBB /* PBXTargetDependency */,
+			);
+			name = MarioMeetsStatusBarTests;
+			productName = MarioMeetsStatusBarTests;
+			productReference = 3730CC181B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3730CBFE1B4D9B3800E8FDBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = SwiftBlog;
+				TargetAttributes = {
+					3730CC051B4D9B3800E8FDBB = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					3730CC171B4D9B3900E8FDBB = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 3730CC051B4D9B3800E8FDBB;
+					};
+				};
+			};
+			buildConfigurationList = 3730CC011B4D9B3800E8FDBB /* Build configuration list for PBXProject "MarioMeetsStatusBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3730CBFD1B4D9B3800E8FDBB;
+			productRefGroup = 3730CC071B4D9B3800E8FDBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3730CC051B4D9B3800E8FDBB /* MarioMeetsStatusBar */,
+				3730CC171B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3730CC041B4D9B3800E8FDBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3730CC101B4D9B3800E8FDBB /* Images.xcassets in Resources */,
+				3730CC131B4D9B3900E8FDBB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3730CC161B4D9B3900E8FDBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3730CC021B4D9B3800E8FDBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3730CC0E1B4D9B3800E8FDBB /* ViewController.swift in Sources */,
+				3730CC0C1B4D9B3800E8FDBB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3730CC141B4D9B3900E8FDBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3730CC1F1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3730CC1A1B4D9B3900E8FDBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3730CC051B4D9B3800E8FDBB /* MarioMeetsStatusBar */;
+			targetProxy = 3730CC191B4D9B3900E8FDBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3730CC111B4D9B3900E8FDBB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3730CC121B4D9B3900E8FDBB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3730CC201B4D9B3900E8FDBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3730CC211B4D9B3900E8FDBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3730CC231B4D9B3900E8FDBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarioMeetsStatusBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3730CC241B4D9B3900E8FDBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MarioMeetsStatusBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3730CC261B4D9B3900E8FDBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MarioMeetsStatusBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarioMeetsStatusBar.app/Contents/MacOS/MarioMeetsStatusBar";
+			};
+			name = Debug;
+		};
+		3730CC271B4D9B3900E8FDBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MarioMeetsStatusBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarioMeetsStatusBar.app/Contents/MacOS/MarioMeetsStatusBar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3730CC011B4D9B3800E8FDBB /* Build configuration list for PBXProject "MarioMeetsStatusBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3730CC201B4D9B3900E8FDBB /* Debug */,
+				3730CC211B4D9B3900E8FDBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3730CC221B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3730CC231B4D9B3900E8FDBB /* Debug */,
+				3730CC241B4D9B3900E8FDBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3730CC251B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3730CC261B4D9B3900E8FDBB /* Debug */,
+				3730CC271B4D9B3900E8FDBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3730CBFE1B4D9B3800E8FDBB /* Project object */;
+}
