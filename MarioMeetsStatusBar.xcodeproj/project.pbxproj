@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3730CC0C1B4D9B3800E8FDBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */; };
-		3730CC0E1B4D9B3800E8FDBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC0D1B4D9B3800E8FDBB /* ViewController.swift */; };
+		3730CC0E1B4D9B3800E8FDBB /* MarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC0D1B4D9B3800E8FDBB /* MarioController.swift */; };
 		3730CC101B4D9B3800E8FDBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */; };
 		3730CC131B4D9B3900E8FDBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3730CC111B4D9B3900E8FDBB /* Main.storyboard */; };
 		3730CC1F1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */; };
@@ -28,12 +28,13 @@
 		3730CC061B4D9B3800E8FDBB /* MarioMeetsStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarioMeetsStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3730CC0A1B4D9B3800E8FDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3730CC0D1B4D9B3800E8FDBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3730CC0D1B4D9B3800E8FDBB /* MarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioController.swift; sourceTree = "<group>"; };
 		3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3730CC121B4D9B3900E8FDBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3730CC181B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarioMeetsStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3730CC1D1B4D9B3900E8FDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioMeetsStatusBarTests.swift; sourceTree = "<group>"; };
+		3730CC571B4F1A5D00E8FDBB /* MarioMeetsStatusBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarioMeetsStatusBar-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +77,10 @@
 			isa = PBXGroup;
 			children = (
 				3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */,
-				3730CC0D1B4D9B3800E8FDBB /* ViewController.swift */,
+				3730CC0D1B4D9B3800E8FDBB /* MarioController.swift */,
 				3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */,
 				3730CC111B4D9B3900E8FDBB /* Main.storyboard */,
+				3730CC5B1B4F1AB300E8FDBB /* Objective-C */,
 				3730CC091B4D9B3800E8FDBB /* Supporting Files */,
 			);
 			path = MarioMeetsStatusBar;
@@ -107,6 +109,14 @@
 				3730CC1D1B4D9B3900E8FDBB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3730CC5B1B4F1AB300E8FDBB /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				3730CC571B4F1A5D00E8FDBB /* MarioMeetsStatusBar-Bridging-Header.h */,
+			);
+			name = "Objective-C";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3730CC0E1B4D9B3800E8FDBB /* ViewController.swift in Sources */,
+				3730CC0E1B4D9B3800E8FDBB /* MarioController.swift in Sources */,
 				3730CC0C1B4D9B3800E8FDBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,10 +337,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MarioMeetsStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarioMeetsStatusBar/MarioMeetsStatusBar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -338,10 +351,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MarioMeetsStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarioMeetsStatusBar/MarioMeetsStatusBar-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -400,6 +415,7 @@
 				3730CC241B4D9B3900E8FDBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3730CC251B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBarTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +424,7 @@
 				3730CC271B4D9B3900E8FDBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
