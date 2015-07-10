@@ -9,8 +9,6 @@
 Todo:
 
 Screen change
-Screen resolution change
-Animationsperformance optimieren
 
 Nice to have:
 Animation ein wenig verspielter machen
