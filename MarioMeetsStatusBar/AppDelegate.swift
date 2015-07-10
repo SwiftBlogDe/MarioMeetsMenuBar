@@ -40,7 +40,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Mario controller erstellen und loslaufen lasse
         addMarioController()
-        
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -53,24 +52,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         marioController.start()
     }
     
-    func destroyApplicationWindow() {
-        window.close()
-    }
-    
     func createApplicationWindow() {
-        // Aufloesung abfragen und Bereich zum zeichnen abfragen
-        let screenFrame = NSScreen.mainScreen()!.frame
-        let marioFrame = MarioWindowController.marioFrame
-        let contentRect = CGRect(
-            x: 0,
-            y: screenFrame.height-marioFrame.height,
-            width: screenFrame.size.width,
-            height: marioFrame.height
-        )
-        
         // Erstelle Mario Fenster und platziere es ueber alle anderen Fenster
         window = MarioWindow(
-            contentRect: contentRect, // Fensterposition
+            contentRect: windowContentRect(), // Fensterposition
             styleMask: NSBorderlessWindowMask, // Keine Titlebar und Rand
             backing: NSBackingStoreType.Buffered,
             defer: true
@@ -93,8 +78,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.orderFrontRegardless()
         
         // Erstellen eines Platzhalter Views und Zuweisung an das Window
-        let contentView = NSView(frame: contentRect)
+        let contentView = NSView(frame: window.frame)
         window.contentView = contentView
+    }
+    
+    func windowContentRect() -> CGRect {
+        // Aufloesung abfragen
+        let screenFrame = NSScreen.mainScreen()!.frame
+        
+        // Marios Dimensionen ermitteln
+        let marioFrame = MarioWindowController.marioFrame
+        
+        // Bereich zum zeichnen festlegen
+        let contentRect = CGRect(
+            x: 0,
+            y: screenFrame.height-marioFrame.height,
+            width: screenFrame.size.width,
+            height: marioFrame.height
+        )
+        return contentRect
+    }
+    
+    func applicationDidChangeScreenParameters(notification: NSNotification) {
+        // Auf Display Veraenderungen reagieren
+        
+        // Fenster neu positionieren
+        window.setFrame(windowContentRect(), display: true)
+        println(window.contentView)
+        
+        // Marios animationen neu berechnen
+        marioController.didChangeScreenParameters()
     }
 }
 

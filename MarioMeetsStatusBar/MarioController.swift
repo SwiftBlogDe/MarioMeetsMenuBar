@@ -20,25 +20,24 @@ class MarioWindowController {
     
     // Hauptfenster
     let marioWindow: MarioWindow!
+    let marioContentView: NSView!
+    var marioLayer: CALayer!
     
     // Marios Frame in dem wir zeichnen
     static let marioFrame = CGRect(
-        x: -kMarioOffscreenOffset,
+        x: 0.0,
         y: 0.0,
         width: 22.0,
         height: 22.0
     )
     
-    // Marios Image View
-    let marioImageView: MarioImageView!
-    
     // Erstellen des Image views und erzeugen von Layern zur animierung
     init(marioWindow: MarioWindow) {
         self.marioWindow = marioWindow
-        marioImageView = MarioImageView(frame: MarioWindowController.marioFrame)
-        marioImageView.layer = CALayer()
-        marioImageView.layerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
-        marioImageView.wantsLayer = true
+        marioContentView = marioWindow.contentView as! NSView
+        marioContentView.layer = CALayer()
+        marioContentView.wantsLayer = true
+        marioContentView.layerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.Never
     }
     
     func start() {
@@ -51,62 +50,84 @@ class MarioWindowController {
 
     func animateMario() {
         // Target X Koordinate errechnen
-        let targetX = self.marioImageView.superview!.frame.width + kMarioOffscreenOffset;
+        let targetX = self.marioContentView.frame.width + kMarioOffscreenOffset;
         
-        // Laufanimation hinzufuegen (Sprites)
-        marioImageView.layer?.addAnimation(marioWalkSpriteAnimation(), forKey: "marioWalk")
-        
-        // Animation fuer die Verschiebung des Frames hinzufuegen
-        NSAnimationContext.runAnimationGroup({ (context: NSAnimationContext!) -> Void in
-            
-            // 23 - https://de.wikipedia.org/wiki/Dreiundzwanzig
-            context.duration = 23.0;
-            
-            // Linearer Zeitverlauf fuer die Animation
-            context.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-            
-            // Zielkoordinate festlegen
-            self.marioImageView.animator().frame = CGRectOffset(self.marioImageView.frame, targetX, 0);
-            }, completionHandler: { // Aufruf nach Beendigung der Animation
-                // Original Frame wiederherstellen
-                self.marioImageView.frame = MarioWindowController.marioFrame
-                
-                // Animation nach 4 Sekunden erneut starten
-                let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(4 * Double(NSEC_PER_SEC)))
-                dispatch_after(delayTime, dispatch_get_main_queue()) {
-                    self.animateMario()
-                }
-        })
-    }
-    
-    func marioWalkSpriteAnimation() -> CAKeyframeAnimation {
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { () -> Void in
+            println("done")
+        }
 
+        /**
+        *  Lauf Animation mit Sprites
+        */
         // Keypath fuer den Austausch ist bei Image Views "contents"
-        let animation = CAKeyframeAnimation(keyPath: "contents")
+        let spriteAnimation = CAKeyframeAnimation(keyPath: "contents")
         
         // Sprites als Einzelbilder
-        animation.values = [
+        spriteAnimation.values = [
             NSImage(named: "mario1")!,
             NSImage(named: "mario3")!,
         ]
         
         // 500ms fuer einen Durchlauf der Animation
-        animation.duration = 0.5
+        spriteAnimation.duration = 0.5
         
         // Diskreter Zeitverlauf, linear uberblendet die Bilder
-        animation.calculationMode = kCAAnimationDiscrete
+        spriteAnimation.calculationMode = kCAAnimationDiscrete
         
         // Wir wiederholen die Animation bis zum Sant Nimmermehrstag
         // https://de.wikipedia.org/wiki/Sankt_Nimmerlein
-        animation.repeatCount = HUGE
+        spriteAnimation.repeatCount = HUGE
         
-        // Rueckgabe der erzeugten Animation
-        return animation
+        
+        
+        /**
+        *  Mario auf der X Koordinate bewegen
+        */
+        let translateAnimation = CABasicAnimation(keyPath: "transform.translation.x")
+        let targetFrame = CGRectOffset(marioContentView.frame, targetX, 0);
+        var sourcePoint = CGPoint(x: 0-kMarioOffscreenOffset, y: 0)
+        translateAnimation.toValue = NSValue(point: targetFrame.origin)
+        translateAnimation.fromValue = NSValue(point: sourcePoint)
+
+        // To Value und From Value verdrehen gibt tollen
+        translateAnimation.removedOnCompletion = false
+        translateAnimation.fillMode = kCAFillModeForwards
+        
+        // 23 - https://de.wikipedia.org/wiki/Dreiundzwanzig
+        translateAnimation.duration = 23.0
+        translateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        translateAnimation.repeatCount = HUGE
+        
+        /**
+        *  Animationen hinzufuegen
+        */
+        marioLayer.addAnimation(spriteAnimation, forKey: "marioWalk")
+        marioLayer.addAnimation(translateAnimation, forKey: "marioTranslate")
+        CATransaction.commit()
     }
     
     func addMario() {
-        // Add mario image view to the main window
-        marioWindow.contentView.addSubview(marioImageView)
+        
+        // Mario Frame
+        let frame = self.dynamicType.marioFrame
+        
+        // Mario Bild Layer erzeugen
+        marioLayer = CALayer()
+        marioLayer.name = "mario1"
+        marioLayer.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: frame.height,
+            height: frame.width
+        )
+        marioLayer.contents = NSImage(named: "mario1")
+        marioContentView.layer?.addSublayer(marioLayer)
+    }
+    
+    func didChangeScreenParameters() {
+        marioLayer.removeAllAnimations()
+        animateMario()
     }
 }
 
