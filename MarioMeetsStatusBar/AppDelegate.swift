@@ -9,6 +9,7 @@
 Todo:
 
 Multi Monitor Mario?
+Sprites auf 32x32 angleichen
 
 Nice to have:
 Animation ein wenig verspielter machen
