@@ -8,7 +8,7 @@
 /*
 Todo:
 
-Screen change
+Multi Monitor Mario?
 
 Nice to have:
 Animation ein wenig verspielter machen
@@ -33,6 +33,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Verhindere die Anzeige der Applikation im Dock
         NSApp.setActivationPolicy(NSApplicationActivationPolicy.Accessory)
         
+        // Notifications ueber Desktop wechsel erhalten
+        let workspaceNC = NSWorkspace.sharedWorkspace().notificationCenter
+        workspaceNC.addObserver(
+            self,
+            selector: "didChangeWorkspace",
+            name:NSWorkspaceActiveSpaceDidChangeNotification,
+            object: NSWorkspace.sharedWorkspace()
+        )
+        
         // Erstelle das Anwendungsfenster und zeige es an
         createApplicationWindow()
 
@@ -45,6 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func addMarioController() {
+        window.level = Int(CGWindowLevelForKey(Int32(kCGMainMenuWindowLevelKey)))
         // Erstelle Mario und lass ihn laufen
         marioController = MarioWindowController(marioWindow: window)
         marioController.start()
@@ -58,8 +68,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: NSBackingStoreType.Buffered,
             defer: true
         )
-        window.hasShadow = false
         window.level = Int(CGWindowLevelForKey(Int32(kCGMainMenuWindowLevelKey)))
+        window.hasShadow = false
         window.opaque = false
         window.backgroundColor = NSColor(
             calibratedHue: 0,
@@ -68,12 +78,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             alpha: 0.0
         )
         
+        // App kann auf allen Spaces gelaunched und angezeigt werden
+        window.collectionBehavior = NSWindowCollectionBehavior.MoveToActiveSpace
+        
         // Jegliche Maus-Events unterdruecken
         window.ignoresMouseEvents = true
         
-        // Applikationsfenster nach vorne holen, dabei den Fokus anderer 
-        // Applikationen unangetastet lassen
-        window.orderFrontRegardless()
+        // Applikationsfenster nach vorne holen
+        window.makeKeyAndOrderFront(nil)
         
         // Erstellen eines Platzhalter Views und Zuweisung an das Window
         let contentView = NSView(frame: window.frame)
@@ -99,13 +111,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidChangeScreenParameters(notification: NSNotification) {
         // Auf Display Veraenderungen reagieren
+        updateWindowFrame()
+    }
+    
+    func updateWindowFrame() {
+        window.level = Int(CGWindowLevelForKey(Int32(kCGMainMenuWindowLevelKey)+1))
         
         // Fenster neu positionieren
         window.setFrame(windowContentRect(), display: true)
-        println(window.contentView)
         
         // Marios animationen neu berechnen
         marioController.didChangeScreenParameters()
+    }
+
+    func didChangeWorkspace() {
+        self.updateWindowFrame()
+        window.orderFrontRegardless()
     }
 }
 

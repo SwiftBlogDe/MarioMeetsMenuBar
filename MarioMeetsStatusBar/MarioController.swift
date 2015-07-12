@@ -51,10 +51,9 @@ class MarioWindowController {
     func animateMario() {
         // Target X Koordinate errechnen
         let targetX = self.marioContentView.frame.width + kMarioOffscreenOffset;
-        
         CATransaction.begin()
         CATransaction.setCompletionBlock { () -> Void in
-            println("done")
+
         }
 
         /**
@@ -78,7 +77,6 @@ class MarioWindowController {
         // Wir wiederholen die Animation bis zum Sant Nimmermehrstag
         // https://de.wikipedia.org/wiki/Sankt_Nimmerlein
         spriteAnimation.repeatCount = HUGE
-        
         
         
         /**
@@ -108,7 +106,6 @@ class MarioWindowController {
     }
     
     func addMario() {
-        
         // Mario Frame
         let frame = self.dynamicType.marioFrame
         
