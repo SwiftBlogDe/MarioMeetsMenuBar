@@ -11,7 +11,7 @@
 		3730CC0E1B4D9B3800E8FDBB /* MarioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC0D1B4D9B3800E8FDBB /* MarioController.swift */; };
 		3730CC101B4D9B3800E8FDBB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */; };
 		3730CC131B4D9B3900E8FDBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3730CC111B4D9B3900E8FDBB /* Main.storyboard */; };
-		3730CC1F1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */; };
+		3730CC1F1B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730CC1E1B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.swift */; };
 		379B84991B5285190027B0F8 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 379B84981B5285190027B0F8 /* Readme.md */; };
 /* End PBXBuildFile section */
 
@@ -21,21 +21,21 @@
 			containerPortal = 3730CBFE1B4D9B3800E8FDBB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3730CC051B4D9B3800E8FDBB;
-			remoteInfo = MarioMeetsStatusBar;
+			remoteInfo = MarioMeetsMenuBar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3730CC061B4D9B3800E8FDBB /* MarioMeetsStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarioMeetsStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3730CC061B4D9B3800E8FDBB /* MarioMeetsMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarioMeetsMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3730CC0A1B4D9B3800E8FDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3730CC0D1B4D9B3800E8FDBB /* MarioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioController.swift; sourceTree = "<group>"; };
 		3730CC0F1B4D9B3800E8FDBB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3730CC121B4D9B3900E8FDBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3730CC181B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarioMeetsStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3730CC181B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarioMeetsMenuBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3730CC1D1B4D9B3900E8FDBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioMeetsStatusBarTests.swift; sourceTree = "<group>"; };
-		3730CC571B4F1A5D00E8FDBB /* MarioMeetsStatusBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarioMeetsStatusBar-Bridging-Header.h"; sourceTree = "<group>"; };
+		3730CC1E1B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarioMeetsMenuBarTests.swift; sourceTree = "<group>"; };
+		3730CC571B4F1A5D00E8FDBB /* MarioMeetsMenuBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarioMeetsMenuBar-Bridging-Header.h"; sourceTree = "<group>"; };
 		379B84981B5285190027B0F8 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -60,8 +60,8 @@
 		3730CBFD1B4D9B3800E8FDBB = {
 			isa = PBXGroup;
 			children = (
-				3730CC081B4D9B3800E8FDBB /* MarioMeetsStatusBar */,
-				3730CC1B1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */,
+				3730CC081B4D9B3800E8FDBB /* MarioMeetsMenuBar */,
+				3730CC1B1B4D9B3900E8FDBB /* MarioMeetsMenuBarTests */,
 				3730CC071B4D9B3800E8FDBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,13 +69,13 @@
 		3730CC071B4D9B3800E8FDBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3730CC061B4D9B3800E8FDBB /* MarioMeetsStatusBar.app */,
-				3730CC181B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.xctest */,
+				3730CC061B4D9B3800E8FDBB /* MarioMeetsMenuBar.app */,
+				3730CC181B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3730CC081B4D9B3800E8FDBB /* MarioMeetsStatusBar */ = {
+		3730CC081B4D9B3800E8FDBB /* MarioMeetsMenuBar */ = {
 			isa = PBXGroup;
 			children = (
 				3730CC0B1B4D9B3800E8FDBB /* AppDelegate.swift */,
@@ -86,7 +86,7 @@
 				3730CC091B4D9B3800E8FDBB /* Supporting Files */,
 				379B84981B5285190027B0F8 /* Readme.md */,
 			);
-			path = MarioMeetsStatusBar;
+			path = MarioMeetsMenuBar;
 			sourceTree = "<group>";
 		};
 		3730CC091B4D9B3800E8FDBB /* Supporting Files */ = {
@@ -97,13 +97,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3730CC1B1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */ = {
+		3730CC1B1B4D9B3900E8FDBB /* MarioMeetsMenuBarTests */ = {
 			isa = PBXGroup;
 			children = (
-				3730CC1E1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift */,
+				3730CC1E1B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.swift */,
 				3730CC1C1B4D9B3900E8FDBB /* Supporting Files */,
 			);
-			path = MarioMeetsStatusBarTests;
+			path = MarioMeetsMenuBarTests;
 			sourceTree = "<group>";
 		};
 		3730CC1C1B4D9B3900E8FDBB /* Supporting Files */ = {
@@ -117,7 +117,7 @@
 		3730CC5B1B4F1AB300E8FDBB /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
-				3730CC571B4F1A5D00E8FDBB /* MarioMeetsStatusBar-Bridging-Header.h */,
+				3730CC571B4F1A5D00E8FDBB /* MarioMeetsMenuBar-Bridging-Header.h */,
 			);
 			name = "Objective-C";
 			sourceTree = "<group>";
@@ -125,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3730CC051B4D9B3800E8FDBB /* MarioMeetsStatusBar */ = {
+		3730CC051B4D9B3800E8FDBB /* MarioMeetsMenuBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3730CC221B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBar" */;
+			buildConfigurationList = 3730CC221B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsMenuBar" */;
 			buildPhases = (
 				3730CC021B4D9B3800E8FDBB /* Sources */,
 				3730CC031B4D9B3800E8FDBB /* Frameworks */,
@@ -137,14 +137,14 @@
 			);
 			dependencies = (
 			);
-			name = MarioMeetsStatusBar;
-			productName = MarioMeetsStatusBar;
-			productReference = 3730CC061B4D9B3800E8FDBB /* MarioMeetsStatusBar.app */;
+			name = MarioMeetsMenuBar;
+			productName = MarioMeetsMenuBar;
+			productReference = 3730CC061B4D9B3800E8FDBB /* MarioMeetsMenuBar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3730CC171B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */ = {
+		3730CC171B4D9B3900E8FDBB /* MarioMeetsMenuBarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3730CC251B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBarTests" */;
+			buildConfigurationList = 3730CC251B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsMenuBarTests" */;
 			buildPhases = (
 				3730CC141B4D9B3900E8FDBB /* Sources */,
 				3730CC151B4D9B3900E8FDBB /* Frameworks */,
@@ -155,9 +155,9 @@
 			dependencies = (
 				3730CC1A1B4D9B3900E8FDBB /* PBXTargetDependency */,
 			);
-			name = MarioMeetsStatusBarTests;
-			productName = MarioMeetsStatusBarTests;
-			productReference = 3730CC181B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.xctest */;
+			name = MarioMeetsMenuBarTests;
+			productName = MarioMeetsMenuBarTests;
+			productReference = 3730CC181B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3730CC011B4D9B3800E8FDBB /* Build configuration list for PBXProject "MarioMeetsStatusBar" */;
+			buildConfigurationList = 3730CC011B4D9B3800E8FDBB /* Build configuration list for PBXProject "MarioMeetsMenuBar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -191,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3730CC051B4D9B3800E8FDBB /* MarioMeetsStatusBar */,
-				3730CC171B4D9B3900E8FDBB /* MarioMeetsStatusBarTests */,
+				3730CC051B4D9B3800E8FDBB /* MarioMeetsMenuBar */,
+				3730CC171B4D9B3900E8FDBB /* MarioMeetsMenuBarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -231,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3730CC1F1B4D9B3900E8FDBB /* MarioMeetsStatusBarTests.swift in Sources */,
+				3730CC1F1B4D9B3900E8FDBB /* MarioMeetsMenuBarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +240,7 @@
 /* Begin PBXTargetDependency section */
 		3730CC1A1B4D9B3900E8FDBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3730CC051B4D9B3800E8FDBB /* MarioMeetsStatusBar */;
+			target = 3730CC051B4D9B3800E8FDBB /* MarioMeetsMenuBar */;
 			targetProxy = 3730CC191B4D9B3900E8FDBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -343,12 +343,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = MarioMeetsStatusBar/Info.plist;
+				INFOPLIST_FILE = MarioMeetsMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.10;
-				SWIFT_OBJC_BRIDGING_HEADER = "MarioMeetsStatusBar/MarioMeetsStatusBar-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarioMeetsMenuBar/MarioMeetsMenuBar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -359,12 +359,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = MarioMeetsStatusBar/Info.plist;
+				INFOPLIST_FILE = MarioMeetsMenuBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.10;
-				SWIFT_OBJC_BRIDGING_HEADER = "MarioMeetsStatusBar/MarioMeetsStatusBar-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MarioMeetsMenuBar/MarioMeetsMenuBar-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -381,10 +381,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MarioMeetsStatusBarTests/Info.plist;
+				INFOPLIST_FILE = MarioMeetsMenuBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarioMeetsStatusBar.app/Contents/MacOS/MarioMeetsStatusBar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarioMeetsMenuBar.app/Contents/MacOS/MarioMeetsMenuBar";
 			};
 			name = Debug;
 		};
@@ -397,17 +397,17 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MarioMeetsStatusBarTests/Info.plist;
+				INFOPLIST_FILE = MarioMeetsMenuBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarioMeetsStatusBar.app/Contents/MacOS/MarioMeetsStatusBar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarioMeetsMenuBar.app/Contents/MacOS/MarioMeetsMenuBar";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3730CC011B4D9B3800E8FDBB /* Build configuration list for PBXProject "MarioMeetsStatusBar" */ = {
+		3730CC011B4D9B3800E8FDBB /* Build configuration list for PBXProject "MarioMeetsMenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3730CC201B4D9B3900E8FDBB /* Debug */,
@@ -416,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3730CC221B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBar" */ = {
+		3730CC221B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsMenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3730CC231B4D9B3900E8FDBB /* Debug */,
@@ -425,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3730CC251B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsStatusBarTests" */ = {
+		3730CC251B4D9B3900E8FDBB /* Build configuration list for PBXNativeTarget "MarioMeetsMenuBarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3730CC261B4D9B3900E8FDBB /* Debug */,

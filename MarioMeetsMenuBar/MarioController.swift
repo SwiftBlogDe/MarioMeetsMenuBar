@@ -1,6 +1,6 @@
 //
 //  MarioController.swift
-//  MarioMeetsStatusBar
+//  MarioMeetsMenuBar
 //
 //  Created by Stefan Popp on 08.07.15.
 //  Copyright (c) 2015 SwiftBlog. All rights reserved.
