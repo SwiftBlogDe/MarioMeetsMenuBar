@@ -48,6 +48,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Mario controller erstellen und loslaufen lasse
         addMarioController()
+        
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW,
+            Int64(2 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.bringToFront()
+        }
+        
     }
     
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -55,7 +62,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func addMarioController() {
-        window.level = Int(CGWindowLevelForKey(Int32(kCGMainMenuWindowLevelKey)))
+        window.level = Int(CGWindowLevelForKey(Int32(kCGMainMenuWindowLevelKey)+1))
         // Erstelle Mario und lass ihn laufen
         marioController = MarioWindowController(marioWindow: window)
         marioController.start()
@@ -69,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: NSBackingStoreType.Buffered,
             defer: true
         )
-        window.level = Int(CGWindowLevelForKey(Int32(kCGMainMenuWindowLevelKey)))
+        window.level = Int(CGWindowLevelForKey(Int32(kCGMainMenuWindowLevelKey)+1))
         window.hasShadow = false
         window.opaque = false
         window.backgroundColor = NSColor(
@@ -86,7 +93,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.ignoresMouseEvents = true
         
         // Applikationsfenster nach vorne holen
-        window.makeKeyAndOrderFront(nil)
+        window.makeKeyAndOrderFront(self)
+        
         
         // Erstellen eines Platzhalter Views und Zuweisung an das Window
         let contentView = NSView(frame: window.frame)
@@ -108,6 +116,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             height: marioFrame.height
         )
         return contentRect
+    }
+    
+    func bringToFront() {
+        window.orderFrontRegardless()
+        
+        // Recall each 15 minutes
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW,
+            Int64((3600/4) * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            self.bringToFront()
+        }
     }
     
     func applicationDidChangeScreenParameters(notification: NSNotification) {

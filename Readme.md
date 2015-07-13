@@ -20,16 +20,21 @@ A little Mario walking from left to right, all day long. The most useless UI add
 
 Just clone or download the current master. You need at least Xcode 6.4 and OS X 10.10 to build the application. 
 
-###Download
+###Installer
 
-Get the current zip here, extract it and place the app anywhere. Run it.
+Get the Installer DMG, mount it and run the installer. After installation the application is automatically started.
 
-[Download Version 1.0.0  (Source: Drobbox)](https://www.dropbox.com/s/q85me9avdm42vr7/MarioMeetsMenuBarV100.zip?dl=1)
+[Download Version 1.0.1 ](https://www.dropbox.com/s/xgpbp0lcps43upn/MarioMeetsMenuBarV101.dmg?dl=1)
+
+### Uninstall
+
+An uninstaller script is available in the Installer DMG
 
 ###Notes
 
-The application needs to be started manually. There is currently no autolaunch option. To quit the application use the activity monitor. 
+The application will launch after the installation. You can set an autolaunch option and kill the application with the Mario Menubar system preference.
 
 ### Thank you
 
 [dingong](https://scratch.mit.edu/projects/167450/) - For your free mario sprite
+[Sandro Pereira, AKA "PH03NYX"](http://sandrodcpereira.com) - For your lovley Icons

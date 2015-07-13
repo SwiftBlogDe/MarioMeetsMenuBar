@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MarioMenuBarPref">
+            <connections>
+                <outlet property="_window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+                <outlet property="marioPrefController" destination="mtb-zw-wyU" id="gAi-VX-ovB"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="MarioMeetsMenuBar options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0z-JX-Cv5" userLabel="PrefPane">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="176" y="715" width="668" height="128"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="668" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCO-xJ-XyC">
+                        <rect key="frame" x="18" y="92" width="154" height="18"/>
+                        <buttonCell key="cell" type="check" title="Launch on OS X start" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="fr1-bn-8El">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="launchOnStartClicked:" target="mtb-zw-wyU" id="fuo-CJ-BCd"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVd-NO-7UU">
+                        <rect key="frame" x="14" y="13" width="98" height="32"/>
+                        <buttonCell key="cell" type="push" title="Kill Mario" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZNr-fv-N9f">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="quitApplicationClicked:" target="mtb-zw-wyU" id="5aw-hJ-GsQ"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IUs-kz-HqV">
+                        <rect key="frame" x="521" y="30" width="92" height="92"/>
+                        <buttonCell key="cell" type="squareTextured" bezelStyle="texturedSquare" image="SwiftBlogLogo" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="n1U-Vg-giV">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="openSwiftBlogClicked:" target="mtb-zw-wyU" id="Cz4-Wu-qe2"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0f-bm-Bce">
+                        <rect key="frame" x="487" y="8" width="161" height="19"/>
+                        <buttonCell key="cell" type="recessed" title="www.swift-blog.de" bezelStyle="recessed" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cfF-Nz-1jo">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                            <font key="font" metaFont="systemBold"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="openSwiftBlogClicked:" target="mtb-zw-wyU" id="ezI-So-oOA"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yz-bL-LUF">
+                        <rect key="frame" x="18" y="69" width="42" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="v1.0.1" id="ZVy-Ph-qJa">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="895" y="511"/>
+        </window>
+        <customObject id="mtb-zw-wyU" userLabel="MarioPrefController" customClass="MarioPrefController">
+            <connections>
+                <outlet property="launchSwitch" destination="KCO-xJ-XyC" id="eOX-PU-bIa"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="SwiftBlogLogo" width="200" height="200"/>
+    </resources>
+</document>
