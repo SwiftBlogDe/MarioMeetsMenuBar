@@ -30,6 +30,12 @@ Get the Installer DMG, mount it and run the installer. After installation the ap
 
 An uninstaller script is available in the Installer DMG
 
+### Settings and quit app
+
+![MarioMeetsMenuBar](https://raw.githubusercontent.com/SwiftBlogDe/MarioMeetsMenuBar/master/Screenshots/mario_system_settings.png "MarioMeetsMenuBar settings")
+
+![MarioMeetsMenuBar](https://raw.githubusercontent.com/SwiftBlogDe/MarioMeetsMenuBar/master/Screenshots/mario_preferences.png "MarioMeetsMenuBar settings pref")
+
 ###Notes
 
 The application will launch after the installation. You can set an autolaunch option and kill the application with the Mario Menubar system preference.
