@@ -24,7 +24,7 @@ Just clone or download the current master. You need at least Xcode 6.4 and OS X 
 
 Get the current zip here, extract it and place the app anywhere. Run it.
 
-[Download Version 1.0.0  (Source: Drobbox)](https://www.dropbox.com/s/q85me9avdm42vr7/MarioMeetsMenuBarV100.zip?dl=0)
+[Download Version 1.0.0  (Source: Drobbox)](https://www.dropbox.com/s/q85me9avdm42vr7/MarioMeetsMenuBarV100.zip?dl=1)
 
 ###Notes
 
