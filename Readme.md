@@ -14,6 +14,10 @@ A little Mario walking from left to right, all day long. The most useless UI add
 
 ![MarioMeetsMenuBar](https://raw.githubusercontent.com/SwiftBlogDe/MarioMeetsMenuBar/master/Screenshots/app_preview.gif "MarioMeetsMenuBar")
 
+### Requirements ###
+
+Mac OS X 10.10+
+
 # Installation #
 
 ###Build from source
